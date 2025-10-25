@@ -1,1 +1,136 @@
 @import "tailwindcss";
+
+
+@keyframes orbit-1 {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.orbit-layer {
+    transform-origin: center;
+    --tw-border-opacity: 1;
+    border: 2px dashed;
+    border-radius: 1000px;
+    position: absolute;
+    transform: translateX(50%) translateY(50%)
+}
+
+.orbit-logos-1 {
+    animation: orbit-1 20s linear infinite
+}
+
+.orbit-logos-1,.orbit-logos-2 {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center
+}
+
+.orbit-logos-2 {
+    animation: orbit-1 20s linear infinite reverse
+}
+
+@keyframes logo-radius-1 {
+    0% {
+        width: 40px
+    }
+
+    5% {
+        width: 240px
+    }
+
+    80% {
+        width: 240px
+    }
+
+    85% {
+        width: 40px
+    }
+}
+
+@keyframes logo-radius-2 {
+    0% {
+        width: 40px
+    }
+
+    5% {
+        width: 400px
+    }
+
+    80% {
+        width: 400px
+    }
+
+    85% {
+        width: 40px
+    }
+}
+
+.expand-orbit-1 {
+    animation: logo-radius-1 20s ease-out infinite;
+    animation-delay: 3s
+}
+
+.expand-orbit-1,.expand-orbit-2 {
+    position: absolute;
+    display: flex;
+    transform-origin: center;
+    border-radius: 100px
+}
+
+.expand-orbit-2 {
+    animation: logo-radius-2 20s ease-out infinite;
+    animation-delay: 5s
+}
+
+.rotate {
+    position: absolute;
+    animation: orbit-1 20s linear infinite
+}
+
+.rotate-counter {
+    position: absolute;
+    animation: orbit-1 20s linear infinite reverse
+}
+
+@keyframes orbit-fade-in {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.orbit-lines-0 {
+    animation: orbit-1 40s linear infinite,orbit-fade-in 4s linear;
+    width: 560px;
+    height: 560px;
+    background-color: hsla(0,0%,100%,.02);
+    border-radius: 1000px
+}
+
+.orbit-lines-1 {
+    animation: orbit-1 40s linear infinite reverse,orbit-fade-in 4s linear;
+    width: 354px;
+    height: 354px
+}
+
+.orbit-lines-1,.orbit-lines-2 {
+    background-color: hsla(0,0%,100%,.05);
+    border-radius: 1000px
+}
+
+.orbit-lines-2 {
+    animation: orbit-1 40s linear infinite,orbit-fade-in 4s linear;
+    width: 206px;
+    height: 206px
+}
