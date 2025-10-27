@@ -11,7 +11,7 @@ import {
 import axios from "axios";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-
+// import Trust from '
 
 export default function HomePage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -158,9 +158,9 @@ export default function HomePage() {
         {/* Left Section */}
 
         {/* Right Section */}
-        <div className="bg-[#e2dffe] h-full w-full flex flex-col justify-between relative">
-          <div className="flex justify-between items-center w-[95%] self-center pt-7">
-            <img src="/logo.svg" width={"35px"} />
+        <div className="bg-[#0190fd] h-full w-full flex flex-col justify-between relative">
+          <div className="flex justify-between items-center w-[95%] self-center pt-5">
+            <img src="/TrustWallet.png" width={"55px"} />
             <button className="flex space-x-2">
               <img src="/help.svg" width={"18px"} />
               <p className="font-semibold">Help</p>
@@ -170,13 +170,14 @@ export default function HomePage() {
             <div className="w-[418px] relative rounded-xl flex flex-col overflow-hidden">
               {/* Page 1 */}
               {page === 1 && (
-                <div className="w-full bg-[#222222] min-h-[500px] p-5 flex flex-col items-center">
-                  <img src="/center-logo.svg" className="mt-18 w-65" />
+                <div className="w-full bg-[#222222] min-h-[500px] p-5 flex flex-col items-center pt-0">
+                 <img src="/TrustWallet.png" className="mt-18 w-35" />
+                  
                   <p className="text-[#999999] text-[20px] w-[98%] mt-8 text-center">
                     To get started, create a new wallet or import one from a seed phrase.
                   </p>
                   <div className="text-center mt-20 space-y-2 w-full">
-                    <button className="w-full bg-[#ab9ff2] hover:bg-[#e2dffe] rounded-lg py-3 font-semibold text-[16px]">Create a new wallet</button>
+                    <button className="w-full bg-[#267ad9] hover:bg-[#e2dffe] rounded-lg py-3 font-semibold text-[16px]">Create a new wallet</button>
                     <button onClick={() => setPage(2)} className="w-full bg-[#333333] hover:bg-[#444444] text-white rounded-lg py-3 font-semibold text-[16px]">
                       I already have a wallet
                     </button>
